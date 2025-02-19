@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Do-To liste</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>TO DO LIST</h1>
+    <section class="placering_input">
+      <input type="text" id="taskInput" placeholder="Add a new task" />
+      <button class="input_button" onclick="addTask()">Add task</button>
+    </section>
+    <section class="placering_todo_elementer">
+      <div>
+        <h2>To-do</h2>
+        <ul class="to_do_list"></ul>
+      </div>
+      <div>
+        <h2>Done</h2>
+        <ul class="done_list"></ul>
+      </div>
+    </section>
+  </body>
+  <script src="js.js"></script>
+</html>

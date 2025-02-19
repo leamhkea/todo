@@ -1,0 +1,107 @@
+/*                     ALLE BASALE RETTELSER                  */
+
+/* Basale rettelser */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgba(174, 178, 149, 1);
+  color: rgba(53, 54, 23, 1);
+}
+
+section {
+  margin: 2rem 2rem;
+}
+
+/* Bestemmer h1 og h2 */
+h1,
+h2 {
+  margin: 3rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/*                       ALT MED INPUT FELT                 */
+
+/* Bestemmer størrelsen på input feltet */
+input {
+  width: 200px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: rgba(220, 223, 201, 1);
+}
+
+/* Bestemmer størrelse, farver osv. på input button */
+.input_button {
+  padding: 11px 20px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(53, 54, 23, 0.819);
+  color: rgba(174, 178, 149, 1);
+}
+
+.input_button:hover {
+  background-color: rgba(53, 54, 23, 0.504);
+}
+
+.placering_input {
+  text-align: center;
+}
+
+/*                     ALT MED LISTE ELEMENTER                */
+
+/* Bestemmer li elementerne */
+li {
+  display: flex;
+  margin: 2rem;
+  padding: 1rem;
+  list-style: none;
+  background-color: rgba(220, 223, 201, 1);
+  border-radius: 1rem;
+  font-style: italic;
+  position: relative;
+}
+
+/* Bestemmer teksten (p) i li */
+li p {
+  background-color: transparent;
+  margin-left: 50px;
+}
+
+/* Bestemmer delete button (javascript class) */
+.delete {
+  cursor: pointer;
+  width: 30px;
+  font-style: normal;
+  background-color: transparent;
+  position: absolute; /* Holder knappen på et fast sted */
+  right: 0; /* Placerer knappen i højre side */
+  top: 50%; /* Centrerer knappen vertikalt */
+  transform: translateY(-50%); /* vertikal position så den er i midten */
+}
+
+/* Bestemmer check-box input (javascript class) */
+.checkbox_done {
+  cursor: pointer;
+  width: 20px;
+  height: 20px; /* Sikrer størrelsen er passende */
+  position: absolute; /* Holder checkbox fast et sted */
+  left: 20px; /* Placerer den 10px fra venstre kant af li */
+  top: 50%; /* Centrerer checkbox vertikalt */
+  transform: translateY(
+    -50%
+  ); /* Justerer positionen, så den er præcist i midten */
+}
+
+/* Bestemmer placering af todo og done */
+.placering_todo_elementer {
+  gap: 8rem;
+}
+
+@media (min-width: 1000px) /* Computer størrelse */ {
+  .placering_todo_elementer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
