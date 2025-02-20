@@ -38,7 +38,11 @@ function showToDo() {
     //Knappen skal være et input/check box i dom
     li.innerHTML += `<input type="checkbox" ${
       task.done ? "checked" : "" //Hvis task = done sættes attribute checked på (flueben) ellers fjernes checked
-    } class="checkbox_done" ><p>${task.text}</p><span class="delete">🗑️</span>`;
+    } class="checkbox_done" ><p>${
+      task.text
+    }</p><input class="antal" type="number" value="${
+      task.quantity
+    }" ><span class="delete">❌</span>`;
 
     //Dette fungerer som if/else, så hvis task er done så "color_done" ellers :
     li.classList.add(task.done ? "color_done" : "color_to_do");
@@ -50,6 +54,12 @@ function showToDo() {
 
       console.log("currentTarget", currentTarget);
       console.log("target", target);
+
+      // Find input-feltet for antal stk i input
+      const quantityInput = li.querySelector(".antal");
+      quantityInput.addEventListener("input", (event) => {
+        task.quantity = event.target.value;
+      });
 
       // Fjerner currenttarget (hele liste elementet) ved at klikke på target (som er krydset).
       if (target.classList.contains("delete")) {

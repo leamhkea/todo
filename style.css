@@ -7,6 +7,8 @@
   box-sizing: border-box;
   background-color: rgba(174, 178, 149, 1);
   color: rgba(53, 54, 23, 1);
+  font-family: monospace;
+  /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
 }
 
 section {
@@ -16,9 +18,14 @@ section {
 /* Bestemmer h1 og h2 */
 h1,
 h2 {
-  margin: 3rem;
+  margin: 4rem;
   text-align: center;
-  font-size: 2rem;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
 }
 
 /*                       ALT MED INPUT FELT                 */
@@ -60,7 +67,6 @@ li {
   list-style: none;
   background-color: rgba(220, 223, 201, 1);
   border-radius: 1rem;
-  font-style: italic;
   position: relative;
 }
 
@@ -68,6 +74,20 @@ li {
 li p {
   background-color: transparent;
   margin-left: 50px;
+}
+
+/* Bestemmer input felt med antal (javascript class) */
+.antal {
+  cursor: pointer;
+  width: 100px;
+  padding: 5px 10px;
+  text-align: center;
+  background-color: rgba(53, 54, 23, 0.819);
+  color: rgba(174, 178, 149, 1);
+  position: absolute; /* Holder knappen på et fast sted */
+  right: 10%; /* Placerer knappen i højre side */
+  top: 50%; /* Centrerer knappen vertikalt */
+  transform: translateY(-50%); /* vertikal position så den er i midten */
 }
 
 /* Bestemmer delete button (javascript class) */
