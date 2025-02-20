@@ -1,14 +1,16 @@
-//Her henter vi ul listen fra html
+//Henter ul listen fra html. Hentning af DOM-elementer:
 const toDoListQsl = document.querySelector(".to_do_list");
 const doneListQsl = document.querySelector(".done_list");
 
-//Lavet et tomt array
+//Opretter et tomt array (holder styr på alle opgaverne som objekter med ID, tekst og færdigstatus)
 const toDoArr = [];
 
+// Når knappen med klassen .input_button bliver klikket, kaldes funktionen addTaskToList().
 document
   .querySelector(".input_button")
   .addEventListener("click", addTaskToList);
 
+// Funktionen til at tilføje opgaver, og en ny opgave (objekt) bliver oprettet
 function addTaskToList() {
   let inputValue = document.querySelector("#taskInput").value; //Henter værdien af input feltet
 
@@ -17,6 +19,7 @@ function addTaskToList() {
     text: inputValue,
     done: false,
   };
+  // Opgaven tilføjes til arrayet toDoArr, og funktionen showToDo() kaldes for at opdatere visningen.
   toDoArr.push(newObjToAddToArray);
   showToDo();
 }
@@ -48,7 +51,7 @@ function showToDo() {
       console.log("currentTarget", currentTarget);
       console.log("target", target);
 
-      // Fjerner currenttarget (hele liste elementet) ved at klikke på target (som er krydset)
+      // Fjerner currenttarget (hele liste elementet) ved at klikke på target (som er krydset).
       if (target.classList.contains("delete")) {
         // Fjern opgaven fra toDoArr
         const taskId = task.id; // gem id'et fra den task, der skal fjernes

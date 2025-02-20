@@ -1,5 +1,0 @@
-- Lave til tekst til inputfelt
-
-- Rykke done task ned i en ny funktion 
-
-- Overstrege done task
